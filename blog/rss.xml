@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Liquid Metal Blog</title>
-        <link>https://your-docusaurus-test-site.com/s/blog</link>
+        <link>https://weaveworks-liquidmetal.github.io/site/blog</link>
         <description>Liquid Metal Blog</description>
         <lastBuildDate>Fri, 23 Sep 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,7 +10,7 @@
         <language>en</language>
         <item>
             <title><![CDATA[Welcome]]></title>
-            <link>https://your-docusaurus-test-site.com/s/blog/welcome</link>
+            <link>https://weaveworks-liquidmetal.github.io/site/blog/welcome</link>
             <guid>welcome</guid>
             <pubDate>Fri, 23 Sep 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Welcome to the new official Liquid Metal docs site!]]></description>
@@ -18,7 +18,7 @@
 a major step towards making using and contributing to LM components accessible.</p><p>We will use this blog to make announcements, publish community news, as
 well as highlight major release changes for our users.</p><p>If you would like to get involved in the project in any way, please don't be shy!
 We are excited to get feedback and questions from users, and any input from
-contributors.</p><p>Watch this space for more exciting developments!</p><p><img loading="lazy" alt="Liquid Metal banner logo" src="/s/assets/images/logo-5e57b042fdee0b12e2c138b7deffedaa.png" width="1740" height="750" class="img_ev3q"></p>]]></content:encoded>
+contributors.</p><p>Watch this space for more exciting developments!</p><p><img loading="lazy" alt="Liquid Metal banner logo" src="/site/assets/images/logo-5e57b042fdee0b12e2c138b7deffedaa.png" width="1740" height="750" class="img_ev3q"></p>]]></content:encoded>
             <category>liquid-metal</category>
             <category>hello</category>
         </item>

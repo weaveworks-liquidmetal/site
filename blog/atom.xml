@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://your-docusaurus-test-site.com/s/blog</id>
+    <id>https://weaveworks-liquidmetal.github.io/site/blog</id>
     <title>Liquid Metal Blog</title>
     <updated>2022-09-23T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://your-docusaurus-test-site.com/s/blog"/>
+    <link rel="alternate" href="https://weaveworks-liquidmetal.github.io/site/blog"/>
     <subtitle>Liquid Metal Blog</subtitle>
-    <icon>https://your-docusaurus-test-site.com/s/img/favicon.ico</icon>
+    <icon>https://weaveworks-liquidmetal.github.io/site/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>welcome</id>
-        <link href="https://your-docusaurus-test-site.com/s/blog/welcome"/>
+        <link href="https://weaveworks-liquidmetal.github.io/site/blog/welcome"/>
         <updated>2022-09-23T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Welcome to the new official Liquid Metal docs site!]]></summary>
         <content type="html"><![CDATA[<p>Welcome to the new official Liquid Metal docs site!</p><p>We are very excited to open up this project to the community, and the docs are
 a major step towards making using and contributing to LM components accessible.</p><p>We will use this blog to make announcements, publish community news, as
 well as highlight major release changes for our users.</p><p>If you would like to get involved in the project in any way, please don't be shy!
 We are excited to get feedback and questions from users, and any input from
-contributors.</p><p>Watch this space for more exciting developments!</p><p><img loading="lazy" alt="Liquid Metal banner logo" src="/s/assets/images/logo-5e57b042fdee0b12e2c138b7deffedaa.png" width="1740" height="750" class="img_ev3q"></p>]]></content>
+contributors.</p><p>Watch this space for more exciting developments!</p><p><img loading="lazy" alt="Liquid Metal banner logo" src="/site/assets/images/logo-5e57b042fdee0b12e2c138b7deffedaa.png" width="1740" height="750" class="img_ev3q"></p>]]></content>
         <author>
             <name>Richard Case</name>
             <uri>https://github.com/richardcase</uri>
