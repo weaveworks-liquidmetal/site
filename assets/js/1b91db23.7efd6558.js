@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[4209],{6490:l=>{l.exports=JSON.parse('{"label":"liquid-metal","permalink":"/blog/tags/liquid-metal","allTagsPath":"/blog/tags","count":1}')}}]);
