@@ -9,7 +9,7 @@ const config = {
   title: 'Liquid Metal',
   tagline: 'Declarative, lightweight, and fast Kubernetes clusters.',
   url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  baseUrl: '/docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -17,7 +17,9 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'weaveworks-liquidmetal', // Usually your GitHub org/user name.
-  projectName: 'getting-started', // Usually your repo name.
+  projectName: 'docs', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
+  trailingSlash: true,
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
