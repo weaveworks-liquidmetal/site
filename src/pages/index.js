@@ -18,7 +18,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Liquid Metal Tutorial - 15min ⏱️
+            Liquid Metal Tutorial - 30min ⏱️
           </Link>
         </div>
       </div>

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 title: Install and start containerd
 ---
 
@@ -53,6 +53,13 @@ flintlock-dev-thinpool  (253:0)
 
 ## Configure and start containerd
 
+:::caution
+This section will start `containerd` as a service. If you run `docker` locally,
+you may already have a `containerd` service running. This new service will run
+parallel to that service and _should not affect it_.
+If you have any doubts or encounter problems, you can disable the original service.
+:::
+
 Run the script to install `containerd` in dev mode:
 
 ```bash
@@ -75,33 +82,35 @@ Output:
 [flintlock provision.sh] Containerd version v1.6.8 successfully installed
 [flintlock provision.sh] Writing containerd config to /etc/containerd/config-dev.toml
 [flintlock provision.sh] Containerd config saved
-[flintlock provision.sh] Starting containerd service
+[flintlock provision.sh] Starting containerd service with /etc/systemd/system/containerd-dev.service
 [flintlock provision.sh] Containerd running
 ```
 
-Verify that the service started with `systemctl status containerd`:
+Verify that the service started with `systemctl status containerd-dev.service`:
 
 ```bash
-● containerd.service - containerd container runtime
-     Loaded: loaded (/etc/systemd/system/containerd.service; enabled; vendor preset: enabled)
-     Active: active (running) since Fri 2022-09-23 09:29:48 BST; 6h ago
+● containerd-dev.service - containerd container runtime
+     Loaded: loaded (/etc/systemd/system/containerd-dev.service; disabled; vendor preset: enabled)
+     Active: active (running) since Tue 2022-09-27 13:02:53 BST; 1s ago
        Docs: https://containerd.io
-   Main PID: 1387 (containerd)
-      Tasks: 26
-     Memory: 76.1M
-        CPU: 1min 5.108s
-     CGroup: /system.slice/containerd.service
-             ├─1387 /usr/local/bin/containerd --config /etc/containerd/config.toml
-             └─3234 /usr/local/bin/containerd-shim-runc-v2 -namespace moby -id 2f8915415519743e84a7da24b5c5ed08853523bb36ab6be40ae903595fd0685b -address /run/containerd/containerd.sock
+    Process: 777843 ExecStartPre=/sbin/modprobe overlay (code=exited, status=0/SUCCESS)
+   Main PID: 777844 (containerd)
+      Tasks: 14
+     Memory: 19.6M
+        CPU: 101ms
+     CGroup: /system.slice/containerd-dev.service
+             └─777844 /usr/local/bin/containerd --config /etc/containerd/config-dev.toml
 
-Sep 23 09:29:47 callisto-XPS containerd[1387]: time="2022-09-23T09:29:47.999964272+01:00" level=info msg="loading plugin \"io.containerd.grpc.v1.snapshots\"..." type=io.containerd.grpc.v1
-Sep 23 09:29:48 callisto-XPS containerd[1387]: time="2022-09-23T09:29:47.999993968+01:00" level=info msg="loading plugin \"io.containerd.grpc.v1.tasks\"..." type=io.containerd.grpc.v1
-Sep 23 09:29:48 callisto-XPS containerd[1387]: time="2022-09-23T09:29:48.000012251+01:00" level=info msg="loading plugin \"io.containerd.grpc.v1.version\"..." type=io.containerd.grpc.v1
-Sep 23 09:29:48 callisto-XPS containerd[1387]: time="2022-09-23T09:29:48.000027967+01:00" level=info msg="loading plugin \"io.containerd.grpc.v1.introspection\"..." type=io.containerd.grpc.v1
-Sep 23 09:29:48 callisto-XPS containerd[1387]: time="2022-09-23T09:29:48.000360221+01:00" level=info msg=serving... address=/run/containerd/containerd.sock.ttrpc
-Sep 23 09:29:48 callisto-XPS containerd[1387]: time="2022-09-23T09:29:48.000398173+01:00" level=info msg=serving... address=/run/containerd/containerd.sock
-Sep 23 09:29:48 callisto-XPS containerd[1387]: time="2022-09-23T09:29:48.000435998+01:00" level=info msg="containerd successfully booted in 0.053398s"
-Sep 23 09:29:48 callisto-XPS systemd[1]: Started containerd container runtime.
+Sep 27 13:02:53 callisto-XPS containerd[777844]: time="2022-09-27T13:02:53.048720119+01:00" level=info msg="Start snapshots syncer"
+Sep 27 13:02:53 callisto-XPS containerd[777844]: time="2022-09-27T13:02:53.048728525+01:00" level=info msg="Start cni network conf syncer for default"
+Sep 27 13:02:53 callisto-XPS containerd[777844]: time="2022-09-27T13:02:53.048735830+01:00" level=info msg="Start streaming server"
+Sep 27 13:02:53 callisto-XPS containerd[777844]: time="2022-09-27T13:02:53.048741460+01:00" level=info msg=serving... address="127.0.0.1:1338"
+Sep 27 13:02:53 callisto-XPS containerd[777844]: time="2022-09-27T13:02:53.048804854+01:00" level=info msg=serving... address=/run/containerd-dev/containerd.sock.ttrpc
+Sep 27 13:02:53 callisto-XPS containerd[777844]: time="2022-09-27T13:02:53.048845976+01:00" level=info msg=serving... address=/run/containerd-dev/containerd.sock
+Sep 27 13:02:53 callisto-XPS containerd[777844]: time="2022-09-27T13:02:53.048894187+01:00" level=debug msg="sd notification" error="<nil>" notified=true state="READY=1"
+Sep 27 13:02:53 callisto-XPS containerd[777844]: time="2022-09-27T13:02:53.048917346+01:00" level=info msg="containerd successfully booted in 0.033546s"
+Sep 27 13:02:53 callisto-XPS systemd[1]: Started containerd container runtime.
+Sep 27 13:02:53 callisto-XPS containerd[777844]: time="2022-09-27T13:02:53.154115708+01:00" level=debug msg="garbage collected" d=6.658119ms
 ...
 ```
 

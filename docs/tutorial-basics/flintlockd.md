@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Install and start Flintlockd
@@ -10,7 +10,7 @@ Here we will provision your machine to act as a host for MicroVMs.
 
 Flintlock is a wrapper around [Firecracker][firecracker] and [Cloud Hypervisor][cloud-h].
 In this exercise we are going to use Firecracker. We can install that with the same
-provisioning script as in the last section.
+provisioning script as in the previous section.
 
 ```bash
 sudo ./provision.sh firecracker
@@ -32,8 +32,11 @@ Verify the installation with `which firecracker`:
 We can install and start the service with the same script:
 
 ```bash
-sudo ./provision.sh flintlock --dev --insecure
+sudo ./provision.sh flintlock --dev --insecure --bridge lmbr0 --grpc-address 0.0.0.0:9090
 ```
+
+_Ensure the argument to `--bridge` is the same as the one set in the [network
+setup step](/docs/tutorial-basics/network.md)._
 
 This command will:
 - Install the latest version of `flintlockd`
@@ -43,7 +46,6 @@ This command will:
 
 Output:
 ```bash
-
 [flintlock provision.sh] Creating containerd directory /var/lib/containerd-dev/snapshotter/devmapper
 [flintlock provision.sh] Creating containerd directory /run/containerd-dev
 [flintlock provision.sh] Creating containerd directory /etc/containerd
@@ -52,38 +54,51 @@ Output:
 [flintlock provision.sh] Flintlockd version v0.3.0 successfully installed
 [flintlock provision.sh] Writing flintlockd config to /etc/opt/flintlockd/config.yaml.
 [flintlock provision.sh] Flintlockd config saved
-[flintlock provision.sh] Starting flintlockd service
-[flintlock provision.sh] Flintlockd running at localhost:9090
+[flintlock provision.sh] Starting flintlockd service with /etc/systemd/system/flintlockd.service
+[flintlock provision.sh] Flintlockd running at 0.0.0.0:9090 via interface enxf8e43b5d5048
 ```
 
-Verify that the service started with `systemctl status flintlockd`:
+Verify that the service started with `systemctl status flintlockd.service`:
 ```bash
 ● flintlockd.service - flintlock microvm service
      Loaded: loaded (/etc/systemd/system/flintlockd.service; enabled; vendor preset: enabled)
-     Active: active (running) since Fri 2022-09-23 15:52:20 BST; 3s ago
+     Active: active (running) since Tue 2022-09-27 13:16:57 BST; 51s ago
        Docs: https://docs.flintlock.dev/
-    Process: 54311 ExecStartPre=which firecracker (code=exited, status=0/SUCCESS)
-    Process: 54312 ExecStartPre=which flintlockd (code=exited, status=0/SUCCESS)
-   Main PID: 54313 (flintlockd)
-      Tasks: 11 (limit: 18694)
-     Memory: 10.6M
-        CPU: 93ms
+    Process: 787721 ExecStartPre=which firecracker (code=exited, status=0/SUCCESS)
+    Process: 787723 ExecStartPre=which flintlockd (code=exited, status=0/SUCCESS)
+   Main PID: 787724 (flintlockd)
+      Tasks: 12 (limit: 18694)
+     Memory: 10.9M
+        CPU: 45ms
      CGroup: /system.slice/flintlockd.service
-             └─54313 /usr/local/bin/flintlockd run
+             └─787724 /usr/local/bin/flintlockd run
 
-Sep 23 15:52:20 callisto-XPS flintlockd[54313]: time="2022-09-23T15:52:20+01:00" level=info msg="starting microvm controller"
-Sep 23 15:52:20 callisto-XPS flintlockd[54313]: time="2022-09-23T15:52:20+01:00" level=info msg="starting microvm controller with 1 workers" controller=microvm
-Sep 23 15:52:20 callisto-XPS flintlockd[54313]: time="2022-09-23T15:52:20+01:00" level=info msg="resyncing microvm specs" controller=microvm
-Sep 23 15:52:20 callisto-XPS flintlockd[54313]: time="2022-09-23T15:52:20+01:00" level=info msg="Resyncing specs" action=resync controller=microvm namespace=ns
-Sep 23 15:52:20 callisto-XPS flintlockd[54313]: time="2022-09-23T15:52:20+01:00" level=debug msg="Getting all specs" action=resync controller=microvm namespace=ns
-Sep 23 15:52:20 callisto-XPS flintlockd[54313]: time="2022-09-23T15:52:20+01:00" level=warning msg="basic authentication is DISABLED"
-Sep 23 15:52:20 callisto-XPS flintlockd[54313]: time="2022-09-23T15:52:20+01:00" level=warning msg="TLS is DISABLED"
-Sep 23 15:52:20 callisto-XPS flintlockd[54313]: time="2022-09-23T15:52:20+01:00" level=debug msg="starting grpc server listening on endpoint localhost:9090"
-Sep 23 15:52:20 callisto-XPS flintlockd[54313]: time="2022-09-23T15:52:20+01:00" level=info msg="starting event listener" controller=microvm
-Sep 23 15:52:20 callisto-XPS flintlockd[54313]: time="2022-09-23T15:52:20+01:00" level=info msg="Starting workersnum_workers1" controller=microvm
+Sep 27 13:16:57 callisto-XPS flintlockd[787724]: time="2022-09-27T13:16:57+01:00" level=info msg="starting microvm controller"
+Sep 27 13:16:57 callisto-XPS flintlockd[787724]: time="2022-09-27T13:16:57+01:00" level=info msg="starting microvm controller with 1 workers" controller=microvm
+Sep 27 13:16:57 callisto-XPS flintlockd[787724]: time="2022-09-27T13:16:57+01:00" level=info msg="resyncing microvm specs" controller=microvm
+Sep 27 13:16:57 callisto-XPS flintlockd[787724]: time="2022-09-27T13:16:57+01:00" level=info msg="Resyncing specs" action=resync controller=microvm namespace=ns
+Sep 27 13:16:57 callisto-XPS flintlockd[787724]: time="2022-09-27T13:16:57+01:00" level=debug msg="Getting all specs" action=resync controller=microvm namespace=ns
+Sep 27 13:16:57 callisto-XPS flintlockd[787724]: time="2022-09-27T13:16:57+01:00" level=warning msg="basic authentication is DISABLED"
+Sep 27 13:16:57 callisto-XPS flintlockd[787724]: time="2022-09-27T13:16:57+01:00" level=warning msg="TLS is DISABLED"
+Sep 27 13:16:57 callisto-XPS flintlockd[787724]: time="2022-09-27T13:16:57+01:00" level=debug msg="starting grpc server listening on endpoint 0.0.0.0:9090"
+Sep 27 13:16:57 callisto-XPS flintlockd[787724]: time="2022-09-27T13:16:57+01:00" level=info msg="starting event listener" controller=microvm
+Sep 27 13:16:57 callisto-XPS flintlockd[787724]: time="2022-09-27T13:16:57+01:00" level=info msg="Starting workersnum_workers1" controller=microvm
 ...
 ```
 
+To verify the service is ready to accept requests, you can use either [`fl`][fl] or
+[`hammertime`][ht] to perform simple queries:
+
+```bash
+hammertime list -a <address>:9090
+
+fl microvm get --host <address>:9090
+```
+
+In the next step we can start to create our CAPI management cluster.
+
 [firecracker]: https://firecracker-microvm.github.io/
 [cloud-h]: https://www.cloudhypervisor.org/
+[fl]: https://github.com/weaveworks-liquidmetal/fl
+[ht]: https://github.com/warehouse-13/hammertime
 

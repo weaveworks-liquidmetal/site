@@ -28,17 +28,18 @@ infrastructure (cattle not pets).
 
 The Liquid Metal project is comprised of various components which work together.
 These are:
-- Flintlock
+- Flintlock/Cloud Hypervisor
 - CAPMVM
 - Firecracker
 - Containerd
 
 :::tip
 A Liquid Metal _system/platform_ refers to the combination of a CAPI management cluster
-running CAPMVM, and a number of bare metal devices running Flintlock.
+running CAPMVM, and a number of bare metal devices running Flintlock which are able
+to host MicroVMs.
 
 A Liquid Metal _cluster_ refers to a workload cluster created by CAPMVM with nodes
-running in MicroVMs created by `flintlockd`.
+running in MicroVMs created by `flintlockd` on the bare metal host.
 :::
 
 ## Flintlock
@@ -47,7 +48,7 @@ Flintlock is a gRPC service written in Go which manages the lifecycle of lightwe
 virtual machines (called MicroVMs) on physical and virtual hosts.
 
 The component can be used independently of Liquid Metal if desired, but its primary
-usecase is to create microVMs on a bare-metal host where the microVMs will be used
+usecase is to create microVMs on a bare-metal host where the MicroVMs will be used
 as nodes in a virtualized Liquid Metal Kubernetes cluster.
 
 :::info
@@ -73,7 +74,8 @@ across a given list of potential Flintlock hosts.
 In Liquid Metal, [Firecracker][firecracker] and [Cloud Hypervisor][cloud-h] are
 both wrapped by Flintlock to give a smoother management
 experience of MicroVMs based on the needs of cluster orchestration. Flintlock will
-default to using Cloud Hypervisor, but Firecracker can be chosen at start time.
+initially default to using Firecracker, but either can be chosen via config on a per
+MicroVM basis. In the near future the default will be Cloud Hypervisor.
 
 ## Containerd
 

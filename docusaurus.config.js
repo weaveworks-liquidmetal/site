@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Liquid Metal',
   tagline: 'Declarative, lightweight, and fast Kubernetes clusters.',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/docs/',
+  url: 'https://weaveworks-liquidmetal.github.io',
+  baseUrl: '/site/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -17,7 +17,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'weaveworks-liquidmetal', // Usually your GitHub org/user name.
-  projectName: 'docs', // Usually your repo name.
+  projectName: 'site', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   trailingSlash: true,
 
@@ -39,14 +39,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/weaveworks-liquidmetal/docs/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/weaveworks-liquidmetal/site/tree/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/weaveworks-liquidmetal/docs/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/weaveworks-liquidmetal/site/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
