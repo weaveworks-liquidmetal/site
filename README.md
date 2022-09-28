@@ -1,41 +1,25 @@
-# Website
+# Liquid Metal Website
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This site is built using Docusaurus.
 
-### Installation
+It is published to github-pages when there are new pushes to `main`. Do not attempt
+to publish manually.
 
-```
-$ yarn
-```
+Local development:
 
-### Local Development
-
-```
-$ yarn start
+```bash
+git clone https://github.com/weaveworks-liquidmetal/site
+cd site
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Because I develop on multiple machines over SSH, I have configured the site to run
+from `0.0.0.0`. If you do not need this (ie the machine you are typing on is the
+same as the one on which you are looking at the UI), open `package.json` and edit
+line 7, removing the `--host 0.0.0.0`.
 
-### Build
-
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
+```bash
+npm ci
+npm run start
 ```
 
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Navigate to localhost:3000 (or `http://<internal ip>:3000` if you did not change `package.json`).
