@@ -16,16 +16,24 @@ provisioning script as in the previous section.
 sudo ./provision.sh firecracker
 ```
 
-Output:
+<details><summary>Output</summary>
+
 ```bash
 [flintlock provision.sh] Installing firecracker version latest to /usr/local/bin
 [flintlock provision.sh] Firecracker version v1.0.0-macvtap successfully installed
 ```
 
-Verify the installation with `which firecracker`:
+</details>
+
+Verify the installation with `which firecracker`.
+
+<details><summary>Output</summary>
+
 ```bash
 /usr/local/bin/firecracker
 ```
+
+</details>
 
 ## Flintlock
 
@@ -44,7 +52,8 @@ This command will:
 - Save a development config file under `/etc/opt/flintlockd/config.yaml`
 - Start `flintlockd` as a `systemd` service
 
-Output:
+<details><summary>Output</summary>
+
 ```bash
 [flintlock provision.sh] Creating containerd directory /var/lib/containerd-dev/snapshotter/devmapper
 [flintlock provision.sh] Creating containerd directory /run/containerd-dev
@@ -58,7 +67,12 @@ Output:
 [flintlock provision.sh] Flintlockd running at 0.0.0.0:9090 via interface enxf8e43b5d5048
 ```
 
-Verify that the service started with `systemctl status flintlockd.service`:
+</details>
+
+Verify that the service started with `systemctl status flintlockd.service`.
+
+<details><summary>Output</summary>
+
 ```bash
 ● flintlockd.service - flintlock microvm service
      Loaded: loaded (/etc/systemd/system/flintlockd.service; enabled; vendor preset: enabled)
@@ -85,6 +99,8 @@ Sep 27 13:16:57 callisto-XPS flintlockd[787724]: time="2022-09-27T13:16:57+01:00
 Sep 27 13:16:57 callisto-XPS flintlockd[787724]: time="2022-09-27T13:16:57+01:00" level=info msg="Starting workersnum_workers1" controller=microvm
 ...
 ```
+
+</details>
 
 To verify the service is ready to accept requests, you can use either [`fl`][fl] or
 [`hammertime`][ht] to perform simple queries:

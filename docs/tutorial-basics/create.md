@@ -58,6 +58,8 @@ There will be 2 instances of `MicrovmMachineTemplate`, one named `lm-demo-contro
 and the other `lm-demo-md-0`. Change both `type`s for the `eth1` network interface
 from `macvtap` to `tap`.
 
+<details><summary>Expand to see required file changes</summary>
+
 ```yaml
 ...
 ---
@@ -98,6 +100,8 @@ spec:
 ...
 ```
 
+</details>
+
 Once you have made those changes, save and close the file.
 
 ## Apply
@@ -109,7 +113,8 @@ cluster:
 kubectl apply -f cluster.yaml
 ```
 
-Output:
+<details><summary>Output</summary>
+
 ```bash
 cluster.cluster.x-k8s.io/lm-demo created
 microvmcluster.infrastructure.cluster.x-k8s.io/lm-demo created
@@ -121,6 +126,8 @@ kubeadmconfigtemplate.bootstrap.cluster.x-k8s.io/lm-demo-md-0 created
 clusterresourceset.addons.cluster.x-k8s.io/crs-cilium created
 configmap/cilium-addon created
 ```
+
+</details>
 
 ## Use
 
@@ -150,7 +157,8 @@ Unable to connect to the server: dial tcp 192.168.100.9:6443: connect: no route 
 ```
 :::
 
-Output:
+<details><summary>Output</summary>
+
 ```bash
 NAME                          STATUS   ROLES                  AGE     VERSION
 lm-demo-control-plane-hdpkj   Ready    control-plane,master   4m35s   v1.21.8
@@ -160,6 +168,8 @@ lm-demo-md-0-gfgbq            Ready    <none>                 3m41s   v1.21.8
 lm-demo-md-0-pxkk6            Ready    <none>                 3m41s   v1.21.8
 lm-demo-md-0-qpzwn            Ready    <none>                 3m43s   v1.21.8
 ```
+
+</details>
 
 Continue to the next page to learn how to inspect the environment and see what a Liquid
 Metal Platform and Cluster look like in action.

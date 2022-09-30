@@ -21,7 +21,8 @@ Next, use `kind` to create a cluster:
 kind create cluster --name lm-management
 ```
 
-Output:
+<details><summary>Output</summary>
+
 ```bash
 Creating cluster "lm-management" ...
  ✓ Ensuring node image (kindest/node:v1.21.1) 🖼
@@ -37,6 +38,8 @@ kubectl cluster-info --context kind-lm-management
 
 Have a nice day! 👋
 ```
+
+</details>
 
 ## Clusterctl
 
@@ -86,7 +89,8 @@ export EXP_CLUSTER_RESOURCE_SET=true # required for the MicroVM clusters we want
 clusterctl init --infrastructure microvm
 ```
 
-Output:
+<details><summary>Output</summary>
+
 ```bash
 Fetching providers
 Installing cert-manager Version="v1.5.3"
@@ -103,6 +107,8 @@ You can now create your first workload cluster by running the following:
 
   clusterctl generate cluster [name] --kubernetes-version [version] | kubectl apply -f -
 ```
+
+</details>
 
 :::tip
 If you see an error containing the words `"401 Bad Credentials"`, make sure you don't

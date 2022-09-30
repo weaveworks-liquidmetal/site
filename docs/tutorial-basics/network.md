@@ -42,7 +42,7 @@ Check that the service is running:
 systemctl status libvirtd.service
 ```
 
-Output:
+<details><summary>Output</summary>
 
 ```bash
 ● libvirtd.service - Virtualization daemon
@@ -73,6 +73,8 @@ Sep 28 14:04:20 callisto-XPS dnsmasq-dhcp[1934832]: DHCPREQUEST(flkbr0) 192.168.
 Sep 28 14:04:20 callisto-XPS dnsmasq-dhcp[1934832]: DHCPACK(flkbr0) 192.168.100.232 26:36:df:1b:ef:a8
 ...
 ```
+
+</details>
 
 ## Create the network and bridge
 
@@ -113,13 +115,15 @@ sudo virsh net-define liquid-metal-net.xml
 sudo virsh net-start liquid-metal
 ```
 
-Output:
+<details><summary>Output</summary>
 
 ```bash
 Network liquid-metal defined from liquid-metal-net.xml
 
 Network liquid-metal started
 ```
+
+</details>
 
 Verify that it was created and is up:
 

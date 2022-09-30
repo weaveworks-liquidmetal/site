@@ -27,7 +27,8 @@ Run the script to create the thinpool:
 sudo ./provision.sh devpool
 ```
 
-Output:
+<details><summary>Output</summary>
+
 ```bash
 [flintlock provision.sh] Creating containerd directory /var/lib/containerd-dev/snapshotter/devmapper
 [flintlock provision.sh] Creating containerd directory /run/containerd-dev
@@ -45,6 +46,8 @@ Output:
 [flintlock provision.sh] Dev thinpool creation complete
 [flintlock provision.sh] remember to set pool_name to flintlock-dev-thinpool in your containerd config
 ```
+
+</details>
 
 Verify that the device has been created with `sudo dmsetup ls`:
 ```bash
@@ -72,7 +75,8 @@ This command will:
 - Save a development config file under `/etc/containerd/config-dev.toml`
 - Start `containerd` as a `systemd` service
 
-Output:
+<details><summary>Output</summary>
+
 ```bash
 [flintlock provision.sh] Creating containerd directory /var/lib/containerd-dev/snapshotter/devmapper
 [flintlock provision.sh] Creating containerd directory /run/containerd-dev
@@ -86,7 +90,11 @@ Output:
 [flintlock provision.sh] Containerd running
 ```
 
-Verify that the service started with `systemctl status containerd-dev.service`:
+</details>
+
+Verify that the service started with `systemctl status containerd-dev.service`.
+
+<details><summary>Output</summary>
 
 ```bash
 ● containerd-dev.service - containerd container runtime
@@ -113,6 +121,8 @@ Sep 27 13:02:53 callisto-XPS systemd[1]: Started containerd container runtime.
 Sep 27 13:02:53 callisto-XPS containerd[777844]: time="2022-09-27T13:02:53.154115708+01:00" level=debug msg="garbage collected" d=6.658119ms
 ...
 ```
+
+</details>
 
 Now we can move on to installing flintlock.
 
