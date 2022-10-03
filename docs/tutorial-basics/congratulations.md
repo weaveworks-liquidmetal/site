@@ -1,7 +1,3 @@
----
-sidebar_position: 9
----
-
 # Congratulations!
 
 You have just learned the **basics of Liquid Metal** and created a platform and a bare-metal cluster on your own machine. :tada:

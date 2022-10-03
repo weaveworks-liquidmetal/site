@@ -1,7 +1,3 @@
----
-sidebar_position: 8
----
-
 # Teardown
 
 Follow these steps to delete your Liquid Metal workload cluster and reset your

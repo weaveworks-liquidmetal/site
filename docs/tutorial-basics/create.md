@@ -1,7 +1,3 @@
----
-sidebar_position: 6
----
-
 # Create a Liquid Metal cluster
 
 We will use `clusterctl` again to generate a manifest for our workload cluster.

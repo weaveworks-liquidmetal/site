@@ -72,7 +72,13 @@ const config = {
             label: 'Docs',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
-          {to: '/community', position: 'left', label: 'Community'},
+          {
+            type: 'docSidebar',
+            to: '/community',
+            position: 'left',
+            label: 'Community',
+            sidebarId: 'community',
+          },
           {
             href: 'https://github.com/weaveworks-liquidmetal',
             label: 'GitHub',

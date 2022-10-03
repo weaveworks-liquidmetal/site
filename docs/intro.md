@@ -51,6 +51,8 @@ The component can be used independently of Liquid Metal if desired, but its prim
 usecase is to create microVMs on a bare-metal host where the MicroVMs will be used
 as nodes in a virtualized Liquid Metal Kubernetes cluster.
 
+Flintlock supports [Firecracker][firecracker] and experimentally [Cloud Hypervisor][cloud-h].
+
 :::info
 Flintlock is only supported to run on **Linux**.
 :::
@@ -99,8 +101,6 @@ think hard about securing those processes.
 Microvms are what they sound like: smaller VMs, or a smaller subset of virtualisation
 tailored for a specific need with minimal overhead, thus making them almost as fast
 to put up and tear down as containers
-
-Flintlock supports [Firecracker][firecracker] and experimentally [Cloud Hypervisor][cloud-h].
 
 ## High-level illustration
 

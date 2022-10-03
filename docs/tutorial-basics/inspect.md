@@ -1,7 +1,3 @@
----
-sidebar_position: 7
----
-
 # Inspect the environment
 
 Here are some steps you can take to see what is happening on your machine when

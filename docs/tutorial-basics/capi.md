@@ -1,7 +1,3 @@
----
-sidebar_position: 5
----
-
 # Provision a CAPI management cluster
 
 In this workshop we are going to use [`kind`][kind] to create a cluster to run

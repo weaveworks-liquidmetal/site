@@ -1,7 +1,3 @@
----
-sidebar_position: 4
----
-
 # Install and start Flintlockd
 
 Here we will provision your machine to act as a host for MicroVMs.
