@@ -15,15 +15,15 @@ the look of.
 Or take a look at the table below to find something specific to your interests
 or skillset.
 
-| Repo | Role in Liquid Metal | Good for those who like... |
-|------|----------------------|----------------------------|
-|[capmvm][capmvm]|A CAPI provider which schedules<br/>kubernetes nodes on microvms.|<ul><li>Kubernetes</li><li>Controllers</li><li>gRPC (client)</li><li>Scheduling</li></ul>|
-|[flintlock][flint]|A service which creates microvms<br/>on bare metal devices.|<ul><li>gRPC (server)</li><li>Low-level networking</li><li>Hardware</li><li>Systems programming</li><li>Linux</li></ul>|
-|[image-builder][image-build]|A pipeline to build container images<br/>which are used as kernels and OSes<br/>in microvms.|<ul><li>Kernel compilation</li><li>Slick pipelines</li><li>Build optimisation</li><li>Linux scripting</li></ul>|
-|[site][site]|This docs site you are reading right now!|<ul><li>Technical writing</li><li>React</li><li>Diagramming</li><li>Building clear content and tutorials</li></ul>|
-|[fl][fl] and [hammertime][ht]|CLI tools for flintlock with different<br/>aims and usecases.|<ul><li>CLI tooling</li><li>gRPC (client)</li></ul>|
-|[LMATS][lmats]|The Liquid Metal Acceptance test suite|<ul><li>Testing</li><li>Complex build patterns</li><li>Scripting</li></ul>|
-|[terraform-equinix-liquidmetal][tf]|A terraform module for provisioning<br/>flintlock hosts in Equinix.|<ul><li>Terraform</li><li>Bare metal</li><li>Scripting</li><li>Networking</li></ul>|
+| Repo | Languages | Role in Liquid Metal | Good for those who like... |
+|------|-----------|----------------------|----------------------------|
+|[capmvm][capmvm]|<ul><li>Go</li></ul>|A CAPI provider which schedules<br/>kubernetes nodes on microvms.|<ul><li>Kubernetes</li><li>Controllers</li><li>gRPC (client)</li><li>Scheduling</li></ul>|
+|[flintlock][flint]|<ul><li>Go</li><li>Bash</li></ul>|A service which creates microvms<br/>on bare metal devices.|<ul><li>gRPC (server)</li><li>Low-level networking</li><li>Hardware</li><li>Systems programming</li><li>Linux</li></ul>|
+|[image-builder][image-build]|<ul><li>Make</li><li>Docker</li></ul>|A pipeline to build container images<br/>which are used as kernels and OSes<br/>in microvms.|<ul><li>Kernel compilation</li><li>Slick pipelines</li><li>Build optimisation</li><li>Linux scripting</li></ul>|
+|[site][site]|<ul><li>Markdown</li><li>JS</li></ul>|This docs site you are reading right now!|<ul><li>Technical writing</li><li>React</li><li>Diagramming</li><li>Building clear content and tutorials</li></ul>|
+|[fl][fl] and [hammertime][ht]|<ul><li>Go</li></ul>|CLI tools for flintlock with different<br/>aims and usecases.|<ul><li>CLI tooling</li><li>gRPC (client)</li></ul>|
+|[LMATS][lmats]|<ul><li>Go</li></ul>|The Liquid Metal Acceptance test suite|<ul><li>Testing</li><li>Complex build patterns</li><li>Scripting</li></ul>|
+|[terraform-equinix-liquidmetal][tf]|<ul><li>Terraform</li><li>Bash</li></ul>|A terraform module for provisioning<br/>flintlock hosts in Equinix.|<ul><li>Terraform</li><li>Bare metal</li><li>Scripting</li><li>Networking</li></ul>|
 
 If you are not ready to write code yet, but you see something which can be improved
 or have an idea, feel free to open an issue. Not all contributions come in the form
