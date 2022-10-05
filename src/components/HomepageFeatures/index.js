@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Flintlock',
-    Svg: require('@site/static/img/LM-LOGO-VERTICAL-LIGHTBACK.svg').default,
+    Svg: require('@site/static/img/DROPLET.svg').default,
     description: (
       <>
         A service for creating and managing MicroVMs on bare metal, via Firecracker

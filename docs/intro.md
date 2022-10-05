@@ -1,12 +1,20 @@
 ---
-sidebar_position: 1
 title: Introduction
 ---
 
+import ThemedImage from '@theme/ThemedImage';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+<ThemedImage
+  alt="Liquid Metal Logo"
+  sources={{
+    light: useBaseUrl('/img/LM-LOGO-HORIZONTAL-LIGHTBACK.svg'),
+    dark: useBaseUrl('/img/LM-LOGO-HORIZONTAL-DARKBACK.svg'),
+  }}
+/>
+
 :::warning SITE UNDER CONSTRUCTION
 :::
-
-# Liquid Metal
 
 Liquid Metal is a set of solutions to:
 
