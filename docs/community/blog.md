@@ -7,7 +7,7 @@ title: Publish something on our blog!
 We'd love to help you share your experience!
 
 Whether you have discovered an interesting use-case, contributed some neat code,
-or just talk about how you set up and use LM day-to-day, we're
+or just want to talk about how you set up and use LM day-to-day, we're
 keen to either feature you directly on our [blog][blog] or link to an article you
 posted elsewhere as part of our `liquid-metal-in-the-wild` series.
 
