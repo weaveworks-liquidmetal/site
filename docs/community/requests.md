@@ -52,12 +52,19 @@ involved.
 
 ### Feature acceptance
 
+We hope to respond to and prioritize new feature requests within 7 working days. Please wait for
+up to 14 before nudging us.
+
 If, after discussion, your idea is accepted, it will be scheduled for POC or work. If you
 would like to contribute all or part of it yourself, please do! See the [contributing][contributing]
 page to learn how to do this.
 
 The maintainers may also decide that your idea is not right for the project at this
 time and close the request as rejected.
+A feature request is the start of a discussion, so don't be put off if it is not
+accepted. Features which either do not contribute to or directly work against
+the project goals will likely be rejected, as will highly specialised usecases.
+
 
 [coc]: /docs/community/coc
 [slack]: https://weave-community.slack.com/archives/C02KARWGR7S

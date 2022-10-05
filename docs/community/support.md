@@ -25,7 +25,7 @@ _Note that our core maintainers are in UTC so may not get back to you immediatel
 if you post out of working hours._
 
 If you do not get a response, open a [ticket](#github). Likewise, if your question
-turns out to have a more elaborate answer than you thought, you will be asked to open a ticket on the
+turns out to have a more elaborate answer than you thought, you will be asked to open a discussion on the
 relevant repo so that someone in the community can be allocated and the process and answer tracked.
 
 :::tip
@@ -35,10 +35,10 @@ current and future community members :100:.
 
 ## Github
 
-We track all help tickets as issues in Github.
+We track all help tickets as discussions in Github.
 
 :::tip
-Before you open a new ticket, search existing issues. Someone may have already
+Before you open a new discussion, search existing discussions. Someone may have already
 asked the same thing and maybe even discovered the answer :crossed_fingers:.
 :::
 
@@ -63,20 +63,29 @@ Help tickets are for those who are stuck trying to accomplish something.
 If you have found a bug, head to the [contributing](/docs/community/contributing) page :bug:.
 :::
 
-Once you have found a repo which you hope is the correct one, go to the `Issues`
-tab and click on `New issue`. You will be invited to select from 3 templates.
-Choose the `Request Help` one.
+Once you have found a repo which you hope is the correct one, go to the `Discussions`
+tab.
 
-Start the title with `"How to ..."`, eg `"How to add SSH keys to my k8s cluster microvms?"`
+1. **Search existing discussions.** If something similar already exists, please contribute to the conversation there.
 
-Try to fill in **as much detail as possible** on the ticket to avoid a lot of
-unnecessary back and forth with the community.
-The template will guide you towards the sort of information we will need at a minimum.
+1. If you don't find anything, select `Q&A`, and click on `New discussion`.
+
+1. Start the title with `"How to ..."`, eg `"How to add SSH keys to my k8s cluster microvms?"`
+
+1. Explain what you are trying to accomplish, what you have tried, and the behaviour you are seeing.
+
+1. Please include the exact the commands you're using, and all the steps you took to setup your environment.
+   Please ensure everything is formatted nicely with [code blocks](https://docs.github.com/en/free-pro-team@latest/github/writing-on-github/creating-and-highlighting-code-blocks).
+
+1. When providing verbose logs, please use either a Gist or [HTML detail tags](https://gist.github.com/ericclemmons/b146fe5da72ca1f706b2ef72a20ac39d).
 
 Once you have opened your ticket, drop a link to it in the [slack][slack] channel to get more people
 involved.
 
-Make sure any answers are captured in the ticket so it can help the next person :tada:.
+Make sure any answers are captured in the discussion so it can help the next person :tada:.
+
+It may turn out that it was a bug after all! In which case a new issue will be created,
+and the rest of the investigation will be tracked there.
 
 [coc]: /docs/community/coc
 [contrib]: /docs/community/contributing

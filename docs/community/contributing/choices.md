@@ -25,6 +25,13 @@ or skillset.
 |[LMATS][lmats]|The Liquid Metal Acceptance test suite|<ul><li>Testing</li><li>Complex build patterns</li><li>Scripting</li></ul>|
 |[terraform-equinix-liquidmetal][tf]|A terraform module for provisioning<br/>flintlock hosts in Equinix.|<ul><li>Terraform</li><li>Bare metal</li><li>Scripting</li><li>Networking</li></ul>|
 
+If you are not ready to write code yet, but you see something which can be improved
+or have an idea, feel free to open an issue. Not all contributions come in the form
+of code, and we appreciate anyone using and reporting on the project to help make it better.
+
+We also encourage people to review others' PRs and help streamline the submission
+process.
+
 ## Languages
 
 All system components are written in Go. The [flintlock][flint] component wraps
@@ -33,7 +40,7 @@ occasionally require debugging. We anticipate needing to contribute in those
 projects in the future.
 
 This website is built using [Docusaurus](https://docusaurus.io) and, while it is
-mostly plug-and-play markdown, allows customisation with ReactJS and CSS. We have no front-end
+mostly plug-and-play markdown, it allows customisation with ReactJS and CSS. We have no front-end
 engineers on the core team, so any contributions in this area would be very highly
 valued :sparkles:.
 
