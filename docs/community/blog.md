@@ -4,7 +4,7 @@ title: Publish something on our blog!
 
 # Got a cool Liquid Metal story to tell?
 
-We'd love to help you share it!
+We'd love to help you share your experience!
 
 Whether you have discovered an interesting use-case, contributed some neat code,
 or just talk about how you set up and use LM day-to-day, we're
