@@ -1,6 +1,5 @@
 ---
 title: Team
-sidebar_position: 3
 ---
 
 # Team

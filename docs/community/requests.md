@@ -1,6 +1,5 @@
 ---
 title: Feature Requests
-sidebar_position: 5
 ---
 
 # Feature Requests
@@ -10,7 +9,7 @@ Liquid Metal has a small but enthusiastic team, and a steadily growing community
 With that in mind, please bear with us as we process your suggestions :sweat_smile:.
 
 Before participating in the Liquid Metal community, please have a read of our
-[Code of Conduct][coc] which applies all involved in an capacity with the project.
+[Code of Conduct][coc] which applies all involved in any capacity with the project.
 
 ## Project board
 

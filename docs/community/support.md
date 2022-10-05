@@ -1,6 +1,5 @@
 ---
 title: Support
-sidebar_position: 2
 ---
 
 # User Support
@@ -11,6 +10,11 @@ With that in mind, please bear with us as we try to solve your issues :sweat_smi
 
 Before participating in the Liquid Metal community, please have a read of our
 [Code of Conduct][coc] which applies to users as well as builders of the project.
+
+:::info
+If you are contributing to the project and need help with your work, head to the
+[contributing][contrib] page.
+:::
 
 ## Slack
 
@@ -75,6 +79,7 @@ involved.
 Make sure any answers are captured in the ticket so it can help the next person :tada:.
 
 [coc]: /docs/community/coc
+[contrib]: /docs/community/contributing
 [slack]: https://weave-community.slack.com/archives/C02KARWGR7S
 [capmvm]: https://github.com/weaveworks-liquidmetal/cluster-api-provider-microvm
 [flintlock]: https://github.com/weaveworks-liquidmetal/flintlock

@@ -62,7 +62,7 @@ const config = {
         title: 'Liquid Metal',
         logo: {
           alt: 'LM Logo',
-          src: 'img/logo.svg',
+          src: 'img/DROPLET.svg',
         },
         items: [
           {
