@@ -107,6 +107,9 @@ hammertime list -a <address>:9090
 fl microvm get --host <address>:9090
 ```
 
+_Because we bound the gRPC service to `0.0.0.0`, the `<address>` in this case
+will be the internal IP of your machine._
+
 In the next step we can start to create our CAPI management cluster.
 
 [firecracker]: https://firecracker-microvm.github.io/
