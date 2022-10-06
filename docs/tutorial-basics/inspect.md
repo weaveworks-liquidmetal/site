@@ -38,8 +38,8 @@ Various CAPI controllers are also running:
 journalctl -fu flintlockd.service
 ```
 
-Data and logs for each MicroVM will be stored under `/var/log/flintlock/vm`, with
-the full path for a MicroVM being `/var/log/flintlock/vm/NAMESPACE/NAME/UUID`.
+Data and logs for each MicroVM will be stored under `/var/lib/flintlock/vm`, with
+the full path for a MicroVM being `/var/lib/flintlock/vm/NAMESPACE/NAME/UUID`.
 
 Under that directory are the following files:
 - `firecracker.cfg`: the configuration set by `flintlock` for `firecracker`
