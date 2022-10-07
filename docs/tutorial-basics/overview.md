@@ -13,9 +13,6 @@ in a development Liquid Metal platform.
 We have tested this tutorial on Ubuntu `20.04` and `22.04`, but any current linux
 distribution with `systemctl` should do.
 
-Your computer will be configured to act as _both_ bare-metal host _and_ a management
-CAPI cluster.
-
 :::tip
 A Liquid Metal _system/platform_ refers to the combination of a CAPI management cluster
 running CAPMVM, and a number of bare metal devices running Flintlock which are able
@@ -25,13 +22,20 @@ A Liquid Metal _cluster_ refers to a workload cluster created by CAPMVM with nod
 running in MicroVMs created by `flintlockd` on the bare metal host.
 :::
 
-In this workshop we will:
+In this workshop we will configured configure your local computer to act as _both_
+bare-metal host _and_ a management CAPI cluster.
+
+#### Part 1 - microvm host:
+We will:
 - :spider_web: Configure a custom virtual network to segregate our virtual devices
 - :electric_plug: Install all required MicroVM host components
   - Firecracker
   - Containerd
   - Flintlock
 - :runner: Start the `flintlockd` service
+
+#### Part 2 - management cluster:
+We will:
 - :female-office-worker: Use `kind` to create a local kubernetes cluster which will act as our CAPI management
 cluster
 - :wrench: Install CAPI and CAPMVM on that `kind` cluster
@@ -40,6 +44,9 @@ cluster
 - :eyes: Watch as CAPMVM connects to our `flintlockd` service to create MicroVMs
 - :building_construction: See kubernetes nodes brought up in each MicroVM, and joined in a workload
 cluster
+
+#### Part 3 - wrap up:
+We will:
 - :mag: Take a look around the environment
 - :firecracker: Tear down:
   - The bare metal workload cluster
