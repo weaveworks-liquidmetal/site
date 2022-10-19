@@ -35,6 +35,11 @@ const sidebars = {
       ],
     },
     {
+      type: 'link',
+      label: 'Tutorial: Raspberry Pi Homelab',
+      href: 'https://warehouse-13.github.io/cosmic/docs/intro',
+    },
+    {
       type: 'category',
       label: 'Guides',
       link: {
