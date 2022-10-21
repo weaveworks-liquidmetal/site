@@ -63,6 +63,7 @@ const sidebars = {
       },
       items: [
         'architecture/high-level',
+        'architecture/microvm-networking',
       ],
     },
     {
