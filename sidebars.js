@@ -73,6 +73,8 @@ const sidebars = {
       },
       items: [
         'troubleshooting/flintlock',
+        'troubleshooting/microvm',
+        'troubleshooting/capmvm',
       ],
     },
   ],
