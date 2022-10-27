@@ -20,7 +20,7 @@ const sidebars = {
       label: 'Tutorial: DO try this at home',
       link: {
         type: 'generated-index',
-        description: 'Use the core components to create a Liquid Metal platform and workload cluster on your local Linux machine.'
+        description: 'A basic tutorial. Use the core components to create a Liquid Metal platform and workload cluster on your local Linux machine.'
       },
       items: [
         'tutorial-basics/overview',
@@ -35,6 +35,22 @@ const sidebars = {
       ],
     },
     {
+      type: 'category',
+      label: 'Tutorial: Equinix Platform',
+      link: {
+        type: 'generated-index',
+        description: 'A more advanced tutorial. Create a Liquid Metal platform on Equinix Metal.'
+      },
+      items: [
+        'tutorial-equinix/intro',
+        'tutorial-equinix/terraform',
+        'tutorial-equinix/inspect',
+        'tutorial-equinix/capi',
+        'tutorial-equinix/create',
+        'tutorial-equinix/congratulations',
+      ],
+    },
+    {
       type: 'link',
       label: 'Tutorial: Raspberry Pi Homelab',
       href: 'https://warehouse-13.github.io/cosmic/docs/intro',
@@ -46,7 +62,6 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
-        'guides/tf-example',
         'guides/hardware',
         'guides/networking',
         'guides/flintlock',

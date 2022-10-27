@@ -1,7 +1,7 @@
 # Provision a CAPI management cluster
 
 <!--
-This page is a copy of docs/tutorial-equinix/capi.md
+This page is a copy of docs/tutorial-basics/capi.md
 If you change one, don't forget to copy over to the other
 -->
 
