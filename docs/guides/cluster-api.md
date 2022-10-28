@@ -2,8 +2,10 @@
 title: Cluster API
 ---
 
-# Cluster API
+Liquid Metal clusters are provisioned and managed through Cluster API (CAPI).
 
-Creating a management CAPI cluster to administer bare-metal workload clusters.
+Tutorials on this site use `kind`, but you can run a management cluster anywhere.
 
-_Coming soon_
+See the [Cluster API docs][capi] for instructions on how to run management clusters.
+
+[capi]: https://cluster-api.sigs.k8s.io/

@@ -260,6 +260,8 @@ Oct 28 10:33:52 host-0 flintlockd[16141]: time="2022-10-28T10:33:52Z" level=info
 Oct 28 10:33:52 host-0 flintlockd[16141]: time="2022-10-28T10:33:52Z" level=info msg="Starting workersnum_workers1" controller=microvm
 ```
 
+Flintlock's configuration can be found at `/etc/opt/flintlockd/config.yaml`.
+
 </details>
 
 `flintlockd` logs will be followable with:

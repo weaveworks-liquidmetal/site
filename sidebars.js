@@ -66,6 +66,7 @@ const sidebars = {
         'guides/hardware',
         'guides/networking',
         'guides/flintlock',
+        'guides/images',
         'guides/cluster-api',
         'guides/capmvm',
         'guides/authn',

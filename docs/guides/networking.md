@@ -2,7 +2,26 @@
 title: Networking
 ---
 
-# Networking modes
+Information about Platform and MicroVM networking.
+
+## Platform networking options
+
+Users are responsible for bringing and configuring their own hardware and networking
+solutions.
+
+We recommend the following network considerations for the platform:
+
+- A private subnet for MicroVMs. Each MicroVM will request addresses on boot.
+  Reserving public IPv4 addresses is unnecessary and wasteful for MicroVMs which
+  will be part of a Kubernetes cluster.
+- A single reserved IP for each cluster's load-balanced API endpoint. This can
+  be public or private, depending on whether you wish the cluster to be exposed.
+  A unexposed cluster with a private address, and suitable access such as a VPN,
+  will be preferable to most.
+- Starting the `flintlockd` services either within a private subnet, or ensuring
+  that the service is secured with [authentication][mtls].
+
+## MicroVM networking modes
 
 Flintlock can create MicroVMs in two different network modes.
 
@@ -97,3 +116,4 @@ spec:
 ```
 
 [macvtap]: https://linuxnatives.net/2012/virtualized-bridged-networking-with-macvtap
+[mtls]: /docs/guides/authn
