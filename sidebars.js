@@ -47,6 +47,7 @@ const sidebars = {
         'tutorial-equinix/inspect',
         'tutorial-equinix/capi',
         'tutorial-equinix/create',
+        'tutorial-equinix/teardown',
         'tutorial-equinix/congratulations',
       ],
     },
@@ -89,6 +90,7 @@ const sidebars = {
       },
       items: [
         'troubleshooting/flintlock',
+        'troubleshooting/containerd',
         'troubleshooting/microvm',
         'troubleshooting/capmvm',
       ],

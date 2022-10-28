@@ -4,6 +4,18 @@ title: MicroVMs
 
 Understanding common MicroVM boot/run errors
 
+Data and logs for each MicroVM will be stored under `/var/lib/flintlock/vm`, with
+the full path for a MicroVM being `/var/lib/flintlock/vm/NAMESPACE/NAME/UUID`.
+
+Under that directory are the following files:
+- `firecracker.cfg`: the configuration set by `flintlock` for `firecracker`
+- `firecracker.log`: logs from the firecracker process
+- `firecracker.metrics`: metrics from the firecracker process
+- `firecracker.pid`: the pid of the running firecracker process
+- `firecracker.stderr`: MicroVM boot errors
+- `firecracker.stdout`: MicroVM boot logs
+- `metadata.json`: MicroVM boot userdata
+
 ### MicroVM network configuration failure/timeout
 
 When MicroVMs boot, they will be assigned an address from wherever you have a dhcp server.

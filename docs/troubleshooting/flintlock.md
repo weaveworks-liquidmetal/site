@@ -26,10 +26,12 @@ You can check this with `dmsetup ls`. It should return at least one line:
 
 ```
 flintlock-dev-thinpool  (253:0)
+# or flintlock-thinpool
 ```
 
-The loop-backed thinpool will not survive restarts, to you'll need
-to recreate this whenever you reboot.
+If you have provisioned your MicroVM host devices in `dev` mode, then containerd's
+storage will be using a loop-backed thinpool.
+These will not survive restarts, so you'll need to recreate this whenever you reboot.
 
 To remedy on a dev environment:
 
@@ -37,9 +39,12 @@ To remedy on a dev environment:
 - Restart containerd: `systemctl restart containerd-dev.service`
 - Restart flintlock: `systemctl restart flintlockd.service`
 
+If you are running in a prod environment, then it is possible that a spare disk
+was not found or it was not provisioned correctly.
+
 To remedy on a prod environment:
 - Attach a drive to the device
-- Run: `provision.sh direct_lvm`
+- Run: `provision.sh direct_lvm --disk <disk name>`
 
 ### Operation not supported (network, macvtap)
 

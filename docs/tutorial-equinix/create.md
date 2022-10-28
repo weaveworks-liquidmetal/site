@@ -140,5 +140,30 @@ lm-demo-md-0-9hf9l            Ready    <none>                 3m43s   v1.21.8
 
 </details>
 
+If your cluster does not start within 10 mins, consult the [troubleshooting][tr] pages.
+
+## Where are my logs?
+
+Both CAPMVM and CAPI logs can be found by querying the management cluster.
+
+:::tip
+We recommend using [k9s][k9s] to view your management cluster.
+:::
+
+To see the CAPMVM controller logs, look for the pod called `capmvm-controller-manager-XXXXX` in
+the `capmvm-system` namespace. In those logs you will be able to see the controller
+reconcile `MicrovmMachine` types and connect to the given flintlock host(s) to
+create MicroVMs.
+
+Various CAPI controllers are also running:
+- The logs of `capi-controller-manager-XXXX` in `capi-system` will show
+  you the overall orchestration of the workload cluster.
+- The logs of `capi-kubeadm-control-plane-controller-manager-XXXX` in `capi-kubeadm-control-plane-system`
+  will show the bootstrapping of the first created MicroVM as a control-plane node.
+- The logs of `capi-kubeadm-bootstrap-controller-manager-XXXX` in `capi-kubeadm-bootstrap-system`
+  will show the bootstrapping of all subsequent MicroVMs as worker nodes.
+
 [kvip]: https://kube-vip.io/
 [kc]: https://kubernetes.io/docs/tasks/tools/
+[tr]: /docs/category/troubleshooting
+[k9s]: https://k9scli.io/

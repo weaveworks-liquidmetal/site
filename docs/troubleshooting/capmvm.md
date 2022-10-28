@@ -4,10 +4,25 @@ title: CAPMVM
 
 Understanding common `CAPMVM` errors.
 
-### Failed to create client for Cluster default/lm-pi-homelab
+Both CAPMVM and CAPI logs can be found by querying the management cluster.
+
+To see the CAPMVM controller logs, look for the pod called `capmvm-controller-manager-XXXXX` in
+the `capmvm-system` namespace. In those logs you will be able to see the controller
+reconcile `MicrovmMachine` types and connect to the given flintlock host(s) to
+create MicroVMs.
+
+Various CAPI controllers are also running:
+- The logs of `capi-controller-manager-XXXX` in `capi-system` will show
+  you the overall orchestration of the workload cluster.
+- The logs of `capi-kubeadm-control-plane-controller-manager-XXXX` in `capi-kubeadm-control-plane-system`
+  will show the bootstrapping of the first created MicroVM as a control-plane node.
+- The logs of `capi-kubeadm-bootstrap-controller-manager-XXXX` in `capi-kubeadm-bootstrap-system`
+  will show the bootstrapping of all subsequent MicroVMs as worker nodes.
+
+### Failed to create client for Cluster default/lm-demo
 
 ```
-failed to create client for Cluster default/lm-pi-homelab: Get \"https://192.168.10.25:6443/api?timeout=10s\
+failed to create client for Cluster default/lm-demo: Get \"https://192.168.10.25:6443/api?timeout=10s\
 ```
 
 This error is expected for the first ~5mins of cluster creation. We are waiting
@@ -74,7 +89,7 @@ And again to the `Cluster`:
   - cluster.cluster.x-k8s.io
 ```
 
-If there are any MicroVMs still running on the board, you can clean them up
+If there are any MicroVMs still running on the device, you can clean them up
 with [`hammertime`][ht] or kill the `firecracker` processes and instruct `containerd`
 to remove the lease and clear the content store.
 

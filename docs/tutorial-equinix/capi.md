@@ -1,16 +1,16 @@
 # Provision a CAPI management cluster
 
-<!--
-This page is a copy of docs/tutorial-basics/capi.md
-If you change one, don't forget to copy over to the other
--->
-
 In this workshop we are going to use [`kind`][kind] to create a cluster to run
 CAPI (Cluster API) controllers and the Liquid Metal CAPMVM (Cluster API Provider MicroVM)
 controllers.
 
 We can then apply yaml manifests to the management cluster, which the CAPI and CAPMVM
 controllers will act on to create child workload clusters in Microvms.
+
+<!--
+This page is a copy of docs/tutorial-basics/capi.md
+If you change one, don't forget to copy over to the other
+-->
 
 ## Kind
 

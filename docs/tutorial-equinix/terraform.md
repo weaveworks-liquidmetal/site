@@ -18,7 +18,7 @@ We will use terraform to create some devices in Equinix.
 1. Create a new SSH key pair:
 
   ```bash
-  ssh-keygen -t ed25519
+  ssh-keygen -t ed25519 -f lm-key -N ""
   ```
 
 1. Connect your local machine to Tailscale:
@@ -33,23 +33,40 @@ We will use terraform to create some devices in Equinix.
   sudo tailscale up
   ```
 
+1. Install the [Equinix CLI tool][eq-cli].
+
+1. Find an Equinix metro with sufficient capacity.
+
+  ```bash
+  metal capacity get
+  ```
+
+  Make note of the `FACILITY` and `PLAN` which has a `normal` availabity level.
+  In my case I will choose:
+
+  ```
+  | am6      | c3.small.x86   | normal     |
+  ```
+
 1. Write the following to a `main.tf` file:
 
   ```bash
   cat << EOF >main.tf
   module "create_devices" {
     source = "weaveworks-liquidmetal/liquidmetal/equinix"
-    version = "0.0.1"
+    version = "0.0.3"
 
     metal_auth_token = "my equinix auth token"
     org_id = "my org id"
     project_name = "my-lm-project"
     public_key = "my ssh public key"
+    metro = "your chosen metro"
+    server_type = "your chosen server type"
   }
 
   module "provision_hosts" {
     source = "weaveworks-liquidmetal/liquidmetal/equinix//modules/provision"
-    version = "0.0.1"
+    version = "0.0.3"
 
     ts_auth_key = "my tailscale auth key"
     private_key_path = "/path/to/my/private/key"
@@ -65,11 +82,15 @@ We will use terraform to create some devices in Equinix.
 1. Edit these fields in your `main.tf`:
 
     - `metal_auth_token`: _your API token for Equinix Metal_
-    - `org_id`: _your Equinix org id_
-    - `project_name`: _the name of the project to create_
-    - `public_key`: _the contents of the `.pub` file you created earlier_
-    - `ts_auth_key`: _your Tailscale auth key_
-    - `private_key_path`: _the path to the private key you generated earlier_
+    - `org_id`: _Your Equinix org id._
+    - `project_name`: _The name of the project to create._
+    - `public_key`: _The contents of the `.pub` file you created earlier._
+    - `metro`: _The metro of the facility you chose from your capacity check earlier.
+      In my case I chose facility `am6`, so my metro will be `am`._
+    - `server_type`: _The plan available in your chosen metro. In my case this is
+      `c3.small.x86`._
+    - `ts_auth_key`: _Your Tailscale auth key._
+    - `private_key_path`: _The full path to the private key you generated earlier._
 
 ## Apply
 
@@ -115,3 +136,4 @@ fl microvm get --host <address>:9090
 [ts-dash]: https://login.tailscale.com/admin/machines
 [fl]: https://github.com/weaveworks-liquidmetal/fl
 [ht]: https://github.com/warehouse-13/hammertime
+[eq-cli]: https://metal.equinix.com/developers/docs/libraries/cli/

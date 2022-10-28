@@ -46,9 +46,17 @@ The following networking topology will be applied:
 - MicroVMs will have `macvtap` devices mapped to their host's VLAN interface.
 - NAT and filter rules will forward egress traffic from the VLAN interface to the parent bond.
 - A VPN subnet router will route traffic from local VPN-connected devices to MicroVMs
-  interfaced with the VLAN.
+  in the private subnet.
 
-TODO diagram of this.
+:::warning
+At the time of writing, the private subnet for MicroVMs (`192.168.10.0/25`) is
+not configurable with the terraform module used in this tutorial. This may cause
+issues if you are using the same network on your local workstation.
+
+Fixing this is on our todo list.
+:::
+
+TODO diagram
 
 [equinix]: https://metal.equinix.com/
 [tailscale]: https://tailscale.com/
