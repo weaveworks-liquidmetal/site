@@ -11,20 +11,131 @@ in any of the [tutorials][install] on this site.
 
 ## CAPMVM API
 
-## Adding SSH keys to MicroVMs
+_CRD yamls generated with [`crd-to-sample-yaml`][cty]._
 
-To add SSH keys to any MicroVM nodes, add the following to your `cluster.yaml`
-before applying:
+### `MicrovmCluster`
 
 ```yaml
-...
+apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
 kind: MicrovmCluster
+metadata: {}
 spec:
+  controlPlaneEndpoint:
+    host: string
+    port: 1
+  microvmProxy:
+    endpoint: string
+  placement:
+    staticPool:
+      basicAuthSecret: string
+      hosts:
+      - controlplaneAllowed: true
+        endpoint: string
+        name: string
   sshPublicKeys:
-  - user: "root"
-    authorizedKeys:
-    - "ssh-ed25519 foobar"
-...
+  - authorizedKeys: ["string"]
+    user: string
+  tlsSecretRef: string
+status:
+  conditions:
+  - lastTransitionTime: string
+    message: string
+    reason: string
+    severity: string
+    status: string
+    type: string
+  failureDomains: {}
+```
+
+### `MicrovmMachine`
+
+```yaml
+apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
+kind: MicrovmMachine
+metadata: {}
+spec:
+  initrd:
+    filename: string
+    image: string
+  kernel:
+    filename: string
+    image: string
+  kernelCmdline: {}
+  memoryMb: 1
+  networkInterfaces:
+  - address: string
+    guestDeviceName: string
+    guestMac: string
+    type: string
+  providerID: string
+  rootVolume:
+    id: string
+    image: string
+    readOnly: true
+  sshPublicKeys:
+  - authorizedKeys: ["string"]
+    user: string
+  vcpu: 1
+  volumes:
+  - id: string
+    image: string
+    readOnly: true
+status:
+  addresses:
+  - address: string
+    type: string
+  conditions:
+  - lastTransitionTime: string
+    message: string
+    reason: string
+    severity: string
+    status: string
+    type: string
+  failureMessage: string
+  failureReason: string
+  ready: true
+  vmState: string
+```
+
+### `MicrovmMachineTemplate`
+
+```yaml
+apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
+kind: MicrovmMachineTemplate
+metadata: {}
+spec:
+  template:
+    metadata:
+      annotations: {}
+      labels: {}
+    spec:
+      initrd:
+        filename: string
+        image: string
+      kernel:
+        filename: string
+        image: string
+      kernelCmdline: {}
+      memoryMb: 1
+      networkInterfaces:
+      - address: string
+        guestDeviceName: string
+        guestMac: string
+        type: string
+      providerID: string
+      rootVolume:
+        id: string
+        image: string
+        readOnly: true
+      sshPublicKeys:
+      - authorizedKeys: ["string"]
+        user: string
+      vcpu: 1
+      volumes:
+      - id: string
+        image: string
+        readOnly: true
 ```
 
 [install]: /docs/tutorial-basics/capi
+[cty]: https://github.com/Skarlso/crd-to-sample-yaml
