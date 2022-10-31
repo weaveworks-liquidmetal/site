@@ -17,9 +17,7 @@ jobs:
         node-version: '16.x'
         cache: npm
     - name: Build website
-      run: |
-        npm ci
-        npm run build
+      run: make build
   release:
     if: ${{ github.event_name != 'pull_request' && github.repository_owner == 'weaveworks-liquidmetal' }}
     runs-on: ubuntu-latest
@@ -40,6 +38,4 @@ jobs:
       run: |
         git config --global user.email "noreply@github.com"
         git config --global user.name "weaveworks-docs-bot"
-        npm ci
-        npm run build
-        npm run deploy
+        make deploy
