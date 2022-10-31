@@ -1,6 +1,5 @@
 #!/bin/bash
 
-TEMPDIR=/tmp/tmp.Zn47zgBWu0
 TEMPDIR=$(mktemp -d)
 CTY_VERSION="v0.0.8"
 
