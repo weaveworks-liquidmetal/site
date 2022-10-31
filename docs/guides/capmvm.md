@@ -13,7 +13,7 @@ in any of the [tutorials][install] on this site.
 
 <!--
 These sections are filled in automatically at deploy time.
-Do not manually edit and commit anything between the ```yaml blocks.
+Do not manually edit and commit anything between the yaml blocks.
 -->
 
 _CRD yamls generated with [`crd-to-sample-yaml`][cty]. Click headings to see
