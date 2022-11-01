@@ -3,8 +3,9 @@ title: Overview
 ---
 
 :::info
-This tutorial can currently only be run with a **Linux** computer, a macOS tutorial
-is in the works.
+This tutorial can be run on **Linux** and **macOS**. HOWEVER, if you are using
+a Mac, you need to complete a few extra steps. These are on the next page. Linux
+users can skip ahead.
 :::
 
 In this tutorial we will use a single local machine to act as multiple devices

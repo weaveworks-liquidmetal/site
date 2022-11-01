@@ -24,6 +24,7 @@ const sidebars = {
       },
       items: [
         'tutorial-basics/overview',
+        'tutorial-basics/macos',
         'tutorial-basics/network',
         'tutorial-basics/containerd',
         'tutorial-basics/flintlockd',
