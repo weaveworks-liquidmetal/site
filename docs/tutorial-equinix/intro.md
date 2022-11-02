@@ -37,6 +37,8 @@ The module will create the following in your org:
 - A "networking hub" device to run our DHCP server, NAT forwarding and VPN subnet router
 - `N` devices to act as MicroVM hosts running the `flintlockd` service
 
+![Liquid Metal Equinix resources](/img/equinix1.jpg)
+
 The following networking topology will be applied:
 
 - All devices will be configured in [Hybrid Bonded mode][hybrid].
@@ -56,7 +58,7 @@ issues if you are using the same network on your local workstation.
 Fixing this is on our todo list.
 :::
 
-TODO diagram
+![Liquid Metal Equinix Network](/img/equinix2.jpg)
 
 [equinix]: https://metal.equinix.com/
 [tailscale]: https://tailscale.com/

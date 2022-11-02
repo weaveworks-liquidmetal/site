@@ -24,6 +24,17 @@ device. For us this is `192.168.10.25`.
 export CONTROL_PLANE_VIP="192.168.10.25"
 ```
 
+:::info
+In this demo we are setting the cluster API to be only privately accessible via our
+VPN. While this is great for security, it means that if we, say, wanted to use
+`kube-vip` to also provide Load Balancers for services, those services would also
+only be accessible via the VPN.
+
+Your options if you do not want this behaviour are to either acquire a public
+IPv4 address for your cluster endpoint, or to use another tool to expose your services,
+such as `ingress-nginx`.
+:::
+
 ## Generate
 
 Now we can use `clusterctl` to generate a cluster manifest:
@@ -135,7 +146,7 @@ lm-demo-md-0-sj8dh            Ready    <none>                 3m41s   v1.21.8
 lm-demo-md-0-o8yd8            Ready    <none>                 3m43s   v1.21.8
 lm-demo-md-0-sad0d            Ready    <none>                 3m41s   v1.21.8
 lm-demo-md-0-jhg78            Ready    <none>                 3m41s   v1.21.8
-lm-demo-md-0-9hf9l            Ready    <none>                 3m43s   v1.21.8
+lm-demo-md-0-9hf9l            Ready    <none>                 3m45s   v1.21.8
 ```
 
 </details>
