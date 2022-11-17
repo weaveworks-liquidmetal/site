@@ -19,6 +19,8 @@ or skillset.
 |------|-----------|----------------------|----------------------------|
 |[capmvm][capmvm]|<ul><li>Go</li></ul>|A CAPI provider which schedules<br/>kubernetes nodes on microvms.|<ul><li>Kubernetes</li><li>Controllers</li><li>gRPC (client)</li><li>Scheduling</li></ul>|
 |[flintlock][flint]|<ul><li>Go</li><li>Bash</li></ul>|A service which creates microvms<br/>on bare metal devices.|<ul><li>gRPC (server)</li><li>Low-level networking</li><li>Hardware</li><li>Systems programming</li><li>Linux</li></ul>|
+|[microvm-operator][mvm-o]|<ul><li>Go</li><li>Bash</li></ul>|A kubernetes operator which creates<br/>microvms on bare metal devices.|<ul><li>Kubernetes</li><li>Controllers</li></ul>|
+|[controller-pkg][ctrl-p]|<ul><li>Go</li></ul>|A library for tolls common to<br/>LM controllers/operator.|<ul><li>Kubernetes</li><li>gRPC (client)</li></ul>|
 |[image-builder][image-build]|<ul><li>Make</li><li>Docker</li></ul>|A pipeline to build container images<br/>which are used as kernels and OSes<br/>in microvms.|<ul><li>Kernel compilation</li><li>Slick pipelines</li><li>Build optimisation</li><li>Linux scripting</li></ul>|
 |[site][site]|<ul><li>Markdown</li><li>JS</li></ul>|This docs site you are reading right now!|<ul><li>Technical writing</li><li>React</li><li>Diagramming</li><li>Building clear content and tutorials</li></ul>|
 |[fl][fl] and [hammertime][ht]|<ul><li>Go</li></ul>|CLI tools for flintlock with different<br/>aims and usecases.|<ul><li>CLI tooling</li><li>gRPC (client)</li></ul>|
@@ -120,6 +122,8 @@ If you no longer have time for the issue, we can have it reassigned.
 [team]: /docs/community/team
 [board]: https://github.com/orgs/weaveworks-liquidmetal/projects/1/views/2
 [flint]: https://github.com/weaveworks-liquidmetal/flintlock
+[mvm-o]: https://github.com/weaveworks-liquidmetal/microvm-operator
+[ctrl-p]: https://github.com/weaveworks-liquidmetal/controller-pkg
 [capmvm]: https://github.com/weaveworks-liquidmetal/cluster-api-provider-microvm
 [image-build]: https://github.com/weaveworks-liquidmetal/image-builder
 [site]: https://github.com/weaveworks-liquidmetal/site
