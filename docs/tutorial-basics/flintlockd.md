@@ -73,7 +73,7 @@ Verify that the service started with `systemctl status flintlockd.service`.
 ● flintlockd.service - flintlock microvm service
      Loaded: loaded (/etc/systemd/system/flintlockd.service; enabled; vendor preset: enabled)
      Active: active (running) since Tue 2022-09-27 13:16:57 BST; 51s ago
-       Docs: https://docs.flintlock.dev/
+       Docs: https://weaveworks-liquidmetal.github.io/flintlock/
     Process: 787721 ExecStartPre=which firecracker (code=exited, status=0/SUCCESS)
     Process: 787723 ExecStartPre=which flintlockd (code=exited, status=0/SUCCESS)
    Main PID: 787724 (flintlockd)

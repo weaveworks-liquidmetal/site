@@ -10,7 +10,7 @@ Flintlock is a gRPC service with an HTTP gateway.
 
 The proto API can be found [here][proto-api].
 
-The HTTP API can be found <a href="/flintlock-api" target="_blank">here</a>.
+The HTTP API can be found [here][http-api].
 
 ## Server configuration
 
@@ -76,4 +76,4 @@ And add the result to the spec:
 [service]: https://github.com/weaveworks-liquidmetal/flintlock/blob/main/flintlockd.service
 [provision]: https://github.com/weaveworks-liquidmetal/flintlock/tree/main/hack/scripts#provisionsh
 [proto-api]: https://buf.build/weaveworks-liquidmetal/flintlock
-[http-api]: /flintlock-api
+[http-api]: https://weaveworks-liquidmetal.github.io/flintlock/flintlock-api/
