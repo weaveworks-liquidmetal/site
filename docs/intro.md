@@ -13,7 +13,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   }}
 />
 
-:::warning SITE UNDER CONSTRUCTION
+:::warning BRAND NEW SITE!
+
+[Let us know](/docs/community/contact.md) what you think :grin:.
 :::
 
 Liquid Metal is a set of solutions to:
