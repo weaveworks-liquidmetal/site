@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[6202],{2126:e=>{e.exports=JSON.parse('{"title":"Guides","slug":"/category/guides","permalink":"/site/docs/category/guides","navigation":{"previous":{"title":"CAPMVM","permalink":"/site/docs/tutorial-rpi/troubleshooting/capmvm"},"next":{"title":"Hardware","permalink":"/site/docs/guides/hardware"}}}')}}]);
