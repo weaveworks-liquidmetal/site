@@ -17,8 +17,13 @@ contributors. You can join our channel [here][slack].
 
 ## Community Meetings
 
-We are in the process of setting up an open-invite community call on Wednesdays
-at 4pm UTC. Links will be posted here when they are ready.
+Community meetings are held every 4 weeks on Mondays at 4pm UTC.
+
+To attend the meetings, first join the [liquid-metal-contributors google group][group].
+You will then be able to see the [group calendar event][event].
+
+You can check out [agenda and meeting notes][agenda] ahead of time, and please
+feel free to add your name and any items to discuss!
 
 ## Github
 
@@ -27,3 +32,6 @@ repo in our [github org][gh].
 
 [slack]: https://weave-community.slack.com/archives/C02KARWGR7S
 [gh]: https://github.com/weaveworks-liquidmetal
+[group]: https://groups.google.com/g/liquid-metal-contributors
+[event]: https://calendar.google.com/calendar/u/0?cid=ZGZhMjVkNzBlZGUwZWQ3OWY1ODNiZTNiMjhlZGNkNGY4YThkNDk0MWU0YWEzNWZhNmJlNGU1MjNlOWU4MGZlYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t
+[agenda]: https://docs.google.com/document/d/16XHoWWouzLypGDJ-YQtwVzVD1zOq-SLTG8mm1bVqSA8/edit
