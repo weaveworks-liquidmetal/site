@@ -4,7 +4,7 @@ title: Shopping list
 
 ### Requirements
 
-If you don't want to get the exactly what this workshop uses, or you already have a bunch of kit
+If you don't want to get exactly what this workshop uses, or you already have a bunch of kit
 that you plan to re-use, here is a list of the base requirements for this homelab.
 
 - Minimum 1 board with minimum 4GB RAM
