@@ -5,8 +5,8 @@ title: Introduction
 Take your Kubernetes homelab cluster to the next level with Liquid Metal MicroVMs.
 
 :::tip Info
-This rig was built quickly and under budget for a Kubernetes community days
-demo. Claudia has shared it so that other people can have fun with the experiment.
+This rig was built quickly and under budget for a [Kubernetes community days demo][kcduk].
+Claudia has shared it so that other people can have fun with the experiment.
 
 There is absolutely no guarantee that any of this will work for you. If you are
 using this guide it means you are prepared to use it as a base, and that you are
@@ -18,6 +18,8 @@ section to help with any weird issued. She is continuing to fine-tune and improv
 so will try to publish updates.
 If you come across something which could be better, feel
 free to contribute! :purple_heart:
+
+You can watch the demo live [here][kcduk].
 :::
 
 ![rig](/img/rig1.jpg)
@@ -49,3 +51,4 @@ Bonus points if you got the Disney reference.
 ![Alt Text](https://media.tenor.com/C7BweO_X39sAAAAd/aladdin-animated.gif)
 
 [cosmic-docs]: https://warehouse-13.github.io/cosmic/docs/intro/
+[kcduk]: https://www.youtube.com/watch?v=8GjFLRpyilw&list=PLX3geWFOgXozvW1avyeZfgPJXrWrzHgYV&index=29&ab_channel=KubernetesCommunityDaysUK
