@@ -3,7 +3,6 @@ title: Bootstrap the hosts
 ---
 
 The Raspberry Pi boards will be bootstrapped to run MicroVMs.
-For more info on each component check out the [component guides][lm-docs].
 
 ## Components/setup TL;DR:
 - **Flintlock** is the entrypoint API for creating MicroVMs. It wraps firecracker
@@ -124,6 +123,5 @@ The above instructions give you the most basic setup. If you want more control
 and observability of the network that the MicroVMs are created in, you can [copy Claudia's
 _exact_ demo setup and create a VLAN][demo].
 
-[lm-docs]: /docs/category/guides
-[sec-docs]: /docs/guides/authn/
+[sec-docs]: /docs/component-info/authn/
 [demo]: https://warehouse-13.github.io/cosmic/docs/build-guide/demo-build/

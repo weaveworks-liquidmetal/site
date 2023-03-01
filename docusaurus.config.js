@@ -93,8 +93,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Getting Started',
+                to: '/docs/category/basics-do-try-this-at-home',
               },
             ],
           },
@@ -107,7 +107,11 @@ const config = {
               },
               {
                 label: 'Contributing',
-                href: 'https://github.com/weaveworks-liquidmetal/contributing',
+                href: '/docs/category/guide-for-contributors',
+              },
+              {
+                label: 'Contact',
+                href: '/docs/community/contact',
               },
             ],
           },

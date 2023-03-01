@@ -32,6 +32,8 @@ There are so many docs to write and so few hours in the day and I am one person!
 
 So, if you find a typo, instead of opening an issue... why not submit a quick PR?
 
+A good guide for the sort of content found in good docs can be found [here](https://documentation.divio.com/).
+
 I have zero experience with JS and React and... stuff, so if anyone wants to improve
 the look and functionality of the site that would be sweet.
 

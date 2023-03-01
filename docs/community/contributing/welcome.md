@@ -48,11 +48,18 @@ Join our [Slack][slack] channel to let people know what you are working on.
 
 ### Community Meetings
 
-We are in the process of setting up an open-invite community call on Wednesdays
-at 4pm UTC. Links will be posted here when they are ready and we encourage you
-to stop by and let us know what you are working on!
+Community meetings are held every 4 weeks on Mondays at 4pm UTC.
+
+To attend the meetings, first join the [liquid-metal-contributors google group][group].
+You will then be able to see the [group calendar event][event].
+
+You can check out [agenda and meeting notes][agenda] ahead of time, and please
+feel free to add your name and any items to discuss!
 
 [gh-sign]: http://github.com/signup
 [coc]: /docs/community/coc
 [gpg]: https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification
 [slack]: https://weave-community.slack.com/archives/C02KARWGR7S
+[group]: https://groups.google.com/g/liquid-metal-contributors
+[event]: https://calendar.google.com/calendar/u/0?cid=ZGZhMjVkNzBlZGUwZWQ3OWY1ODNiZTNiMjhlZGNkNGY4YThkNDk0MWU0YWEzNWZhNmJlNGU1MjNlOWU4MGZlYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t
+[agenda]: https://docs.google.com/document/d/16XHoWWouzLypGDJ-YQtwVzVD1zOq-SLTG8mm1bVqSA8/edit

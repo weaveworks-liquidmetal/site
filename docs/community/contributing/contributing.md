@@ -113,7 +113,7 @@ PRs which adhere to our guidelines are more likely to be accepted
 
 1. **There are well-written commit messages** ([see below][commit])
   which will make future debugging fun. (Any commits of the variety `"fix stuff"`, `"does thing"`
-  or `"my god why"` much be squashed or rebased.)
+  or `"my god why"` must be squashed or rebased.)
 
 1. **Each of those well-written commits is compilable** and the tests run successfully at
   that point.

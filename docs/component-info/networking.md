@@ -116,4 +116,4 @@ spec:
 ```
 
 [macvtap]: https://linuxnatives.net/2012/virtualized-bridged-networking-with-macvtap
-[mtls]: /docs/guides/authn
+[mtls]: /docs/component-info/authn
