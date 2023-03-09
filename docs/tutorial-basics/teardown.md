@@ -101,8 +101,16 @@ Unit containerd-dev.service could not be found.
 Use the `dmsetup` command to remove any leftover thin devices:
 
 ```bash
-sudo dmsetup remove_all -f
+sudo dmsetup ls | awk '/flintlock/ {print $1}' | xargs sudo dmsetup remove -f
 ```
+
+:::caution
+
+The above command filters for devices matching `flintlock`. If you use
+device-mapper to manage other devices, and are abundantly cautious you may want,
+to remove `flintlock-` devices individually.
+
+:::
 
 Verify that all have been cleared:
 
