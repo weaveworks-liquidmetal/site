@@ -22,3 +22,15 @@ us on Github issues.
 - :watch: UTC
 - :envelope: claudia@weave.works
 - :floppy_disk: https://github.com/Callisto13
+
+### Balazs Nadasdi
+
+- :watch: CET
+- :envelope: balazs@weave.works
+- :floppy_disk: https://github.com/yitsushi
+
+### Gergely Bräutigam
+
+- :watch: CET
+- :envelope: gergely@weave.works
+- :floppy_disk: https://github.com/Skarlso
