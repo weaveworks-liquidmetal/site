@@ -11,7 +11,7 @@
         <item>
             <title><![CDATA[Welcome]]></title>
             <link>https://weaveworks-liquidmetal.github.io/site/blog/welcome</link>
-            <guid>welcome</guid>
+            <guid>https://weaveworks-liquidmetal.github.io/site/blog/welcome</guid>
             <pubDate>Fri, 23 Sep 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Welcome to the new official Liquid Metal docs site!]]></description>
             <content:encoded><![CDATA[<p>Welcome to the new official Liquid Metal docs site!</p><p>We are very excited to open up this project to the community, and the docs are
@@ -25,7 +25,7 @@ contributors.</p><p>Watch this space for more exciting developments!</p><p><img 
         <item>
             <title><![CDATA[GitOps Beyond Kubernetes: Liquid Metal and EKS Anywhere Manage Hybrid Infrastructure Effortlessly]]></title>
             <link>https://weaveworks-liquidmetal.github.io/site/blog/gitops-beyond-k8s</link>
-            <guid>gitops-beyond-k8s</guid>
+            <guid>https://weaveworks-liquidmetal.github.io/site/blog/gitops-beyond-k8s</guid>
             <pubDate>Thu, 28 Jul 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Liquid Metal supports EKS Anywhere and EKS-D natively across bare-metal and]]></description>
             <content:encoded><![CDATA[<blockquote><p>Liquid Metal supports EKS Anywhere and EKS-D natively across bare-metal and
@@ -38,7 +38,7 @@ manage a hybrid infrastructure the GitOps way.</p></blockquote><p><em><a href="h
         <item>
             <title><![CDATA[Liquid Metal is Here: Supported, Multi-Cluster Kubernetes on micro-VMs and Bare Metal]]></title>
             <link>https://weaveworks-liquidmetal.github.io/site/blog/liquid-metal-is-here</link>
-            <guid>liquid-metal-is-here</guid>
+            <guid>https://weaveworks-liquidmetal.github.io/site/blog/liquid-metal-is-here</guid>
             <pubDate>Tue, 17 May 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Liquid Metal simplifies scaling Kubernetes clusters across multiple]]></description>
             <content:encoded><![CDATA[<blockquote><p>Liquid Metal simplifies scaling Kubernetes clusters across multiple
@@ -51,7 +51,7 @@ lightweight VMs and bare metal with GitOps.</p></blockquote><p><em><a href="http
         <item>
             <title><![CDATA[Liquid Metal: Kubernetes on Bare Metal with MicroVMs]]></title>
             <link>https://weaveworks-liquidmetal.github.io/site/blog/k8s-on-bare-metal</link>
-            <guid>k8s-on-bare-metal</guid>
+            <guid>https://weaveworks-liquidmetal.github.io/site/blog/k8s-on-bare-metal</guid>
             <pubDate>Thu, 06 May 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Today we can successfully run multiple microVM-based Kubernetes clusters,]]></description>
             <content:encoded><![CDATA[<blockquote><p>Today we can successfully run multiple microVM-based Kubernetes clusters,

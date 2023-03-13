@@ -9,7 +9,7 @@
     <icon>https://weaveworks-liquidmetal.github.io/site/img/DROPLET.svg</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
-        <id>welcome</id>
+        <id>https://weaveworks-liquidmetal.github.io/site/blog/welcome</id>
         <link href="https://weaveworks-liquidmetal.github.io/site/blog/welcome"/>
         <updated>2022-09-23T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Welcome to the new official Liquid Metal docs site!]]></summary>
@@ -31,7 +31,7 @@ contributors.</p><p>Watch this space for more exciting developments!</p><p><img 
     </entry>
     <entry>
         <title type="html"><![CDATA[GitOps Beyond Kubernetes: Liquid Metal and EKS Anywhere Manage Hybrid Infrastructure Effortlessly]]></title>
-        <id>gitops-beyond-k8s</id>
+        <id>https://weaveworks-liquidmetal.github.io/site/blog/gitops-beyond-k8s</id>
         <link href="https://weaveworks-liquidmetal.github.io/site/blog/gitops-beyond-k8s"/>
         <updated>2022-07-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Liquid Metal supports EKS Anywhere and EKS-D natively across bare-metal and]]></summary>
@@ -44,7 +44,7 @@ manage a hybrid infrastructure the GitOps way.</p></blockquote><p><em><a href="h
     </entry>
     <entry>
         <title type="html"><![CDATA[Liquid Metal is Here: Supported, Multi-Cluster Kubernetes on micro-VMs and Bare Metal]]></title>
-        <id>liquid-metal-is-here</id>
+        <id>https://weaveworks-liquidmetal.github.io/site/blog/liquid-metal-is-here</id>
         <link href="https://weaveworks-liquidmetal.github.io/site/blog/liquid-metal-is-here"/>
         <updated>2022-05-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Liquid Metal simplifies scaling Kubernetes clusters across multiple]]></summary>
@@ -57,7 +57,7 @@ lightweight VMs and bare metal with GitOps.</p></blockquote><p><em><a href="http
     </entry>
     <entry>
         <title type="html"><![CDATA[Liquid Metal: Kubernetes on Bare Metal with MicroVMs]]></title>
-        <id>k8s-on-bare-metal</id>
+        <id>https://weaveworks-liquidmetal.github.io/site/blog/k8s-on-bare-metal</id>
         <link href="https://weaveworks-liquidmetal.github.io/site/blog/k8s-on-bare-metal"/>
         <updated>2021-05-06T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Today we can successfully run multiple microVM-based Kubernetes clusters,]]></summary>
